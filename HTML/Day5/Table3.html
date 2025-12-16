@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table3</title>
+</head>
+<style>
+    table,td{
+        border: 2px solid black;
+    }
+    td{
+        text-align: center;
+        padding: 1px;
+    }
+    /*tr:nth-child(odd)
+    {
+        background-color: beige;
+    }*/
+    /*tr:nth-child(even)
+    {
+        background-color: bisque;
+    }*/
+    /*td:nth-child(even)
+    {
+        background-color: aquamarine;
+    }*/
+    /*td:nth-child(odd)
+    {
+        background-color: rgb(105, 249, 249);
+    }*/
+    tr:hover{
+        background-color: aqua;
+    }
+    
+</style>
+<body>
+    <!--colspan-->
+    <H1>Table1 for column</H1>
+    <table>
+        <tr>
+            <td colspan="2">id</td>
+            <td colspan="3">Others</td>
+        </tr>
+        <tr>
+            <td>Roll</td>
+            <td>Registration</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Course</td>
+        </tr>
+        <tr>
+            <td>121</td>
+            <td>045</td>
+            <td>Sampa</td>
+            <td>20</td>
+            <td>CSE</td>
+        </tr>
+    </table>
+
+
+
+    <!--rowspan-->
+    <h1>Table 2 for rows</h1>
+    <table>
+        <tr>
+            <td><b>Name</b></td>
+            <td><b>Company</b></td>
+            <td><b>salary</b></td>
+        </tr>
+        <tr>
+            <td>Nayan</td>
+            <td>Amazon</td>
+            <td>50000</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Vaishali</td>
+            <td>Wipro</td>
+            <td>60000</td>
+        </tr>
+        <tr>
+        
+            <td>TCS</td>
+            <td>5000</td>
+        </tr>
+        <tr>
+            <td>Ramesh</td>
+            <td>Google</td>
+            <td>70000</td>
+        </tr>
+        <tr>
+            <td>Roshni</td>
+            <td>Flipkart</td>
+            <td>65000</td>
+        </tr>
+    </table>
+
+
+    <br><br><br>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Class</td>
+            <td>Section</td>
+            <td>Gender</td>
+            <td>Location</td>
+        </tr>
+        <tr>
+            <td>Sampa</td>
+            <td>20</td>
+            <td>7</td>
+            <td>A</td>
+            <td>F</td>
+            <td>Kolkata</td>
+        </tr>
+        <tr>
+            <td>Arpita</td>
+            <td>19</td>
+            <td>9</td>
+            <td>B</td>
+            <td>F</td>
+            <td>Digha</td>
+        </tr>
+        <tr>
+            <td>Rudra</td>
+            <td>21</td>
+            <td>10</td>
+            <td>A</td>
+            <td>M</td>
+            <td>Naihati</td>
+        </tr>
+        <tr>
+            <td>Ankush</td>
+            <td>12</td>
+            <td>5</td>
+            <td>B</td>
+            <td>M</td>
+            <td>Barrackpore</td>
+        </tr>
+    </table>
+</body>
+</html>
