@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .aa{
+        background-color: blue;
+        height: 200px;
+        width: 200PX;
+        border: 2px solid black;
+        outline: 2px solid purple;
+        outline-offset: 2px;
+    }
+    .bb{
+        background-color: aqua;
+        /*height: 10%;
+        width: 20%;*/
+        height: 10vh;
+        width: 20vw;
+    }
+</style>
+<body>
+    <div class="aa">
+        <div class="bb">
+
+        </div>
+    </div>
+    <br><br><br><br>
+    <progress id="file" value="40" max="100"></progress>
+    <br><br><br>
+    <summary>About</summary>
+    <details>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, totam. Odio ullam minima explicabo vero porro amet exercitationem maxime autem, fuga in, fugit itaque excepturi. Praesentium culpa quia quasi voluptates.</details>
+    <br><br><br>
+    <p contenteditable >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil corrupti voluptates quae! Veritatis ipsam ad natus. Repudiandae numquam a rerum aspernatur, fugiat blanditiis tempora quis voluptatem dolore atque minima necessitatibus!</p>
+    <br><br><br>
+    <time datetime >12pm</time>
+</body>
+<script>
+    let x = document.getElementById('file')
+    function show(){
+        if(x.value<100)
+    {
+        x.value+=1
+    }
+    }
+    setInterval(show,100)
+</script>
+</html>

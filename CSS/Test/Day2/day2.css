@@ -1,0 +1,33 @@
+
+.div1{
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    /*border-radius: 20px;*/
+    /*border-radius:10px 10px 20px 20px;*/
+    /*border-radius: 50%;*/
+    border-radius: 20px 10px;
+}
+
+p{
+    background-color: aqua;
+    /*margin: 10px;*/
+    margin-left: 100px;
+    margin-right: 10px;
+    margin-top: 10px; 
+    margin-bottom: 100px;
+    /*padding: 20PX;*/
+    padding-left: 100px;
+    padding-right: 10px;
+    padding-top: 10px;
+   padding-bottom : 20px;
+} 
+
+.aa{
+    background-color: blueviolet;
+    width: 200px;
+    height: 200pxpx;
+    padding: 25px;
+    box-sizing: content-box;
+}
