@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        background-color: rgb(140, 0, 255);
+    }
+    .fullpage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .login{
+        background-color: white;
+        height: auto;
+        width: 300px;
+        border-radius:10px ;
+        padding-bottom:10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 70px;
+        box-shadow: 2px 3px 3px 3px;
+    }
+    .login-title{
+        text-align: center;
+         
+    }
+   
+    .underline{
+        width: 300px;
+        height: 2px;
+        margin: 0 auto 20px;
+        background-color: #333;
+    }
+    .login h5 a{
+        text-decoration: none;
+    }
+    .login form input{
+        border: none;
+    }
+    button{
+        height: 30PX;
+        width: 250px;
+        align-items: center;
+        border-radius: 10px;
+        color: #171616;
+       
+        font-weight: bold;
+    }
+    button:hover
+    {
+        background-color: blue;
+        color: aliceblue;
+    }
+</style>
+<body>
+    <div class="fullpage">
+        <div class="login">
+            <h1 class="login-title">Login</h1>
+            <div class="underline"></div>
+            <form action="">
+                <label for="username">Username</label><br>
+                <input style="outline: none;" type="text" placeholder="Username">
+                <div class="underline"></div>
+                <label for="password">Password</label><br>
+                <input style="outline: none;" type="password" placeholder="password">
+                <div class="underline"></div>
+            </form>
+            <h5>Forget Password?</h5>
+            <center><button>Login</button></center>
+            <center><h5>Not a Member ? <a href="" style="color: blue;">SignUp</a></h5></center>
+             
+        </div>
+    </div>
+</body>
+</html>
