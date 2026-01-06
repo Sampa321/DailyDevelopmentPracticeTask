@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .show{
+        display: none;
+    }
+    .h:hover .show{
+        display: block;
+    }
+    li::marker{
+        color: blue;
+    }
+    .para::first-letter{
+        color: red;
+    }
+    .pp::first-line{
+        color: blueviolet;
+    }
+</style>
+<body>
+    <div class="h">
+        <span>Hover me</span>
+        <p class="show">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate aspernatur amet et corporis nesciunt ipsum, eos mollitia inventore ab sapiente iusto sequi veniam possimus blanditiis animi modi dolore voluptatibus at.</p>
+    </div>
+
+    <p class="pp">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, consequuntur.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, consequuntur.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, consequuntur.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, consequuntur.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, consequuntur.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, consequuntur.
+    </p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga soluta sed consectetur cum accusantium, dolorem tenetur odio ratione eveniet veritatis.</p>
+    
+    <ul class="sh">
+        <li>Home</li>
+        <li>About</li>
+        <li>contact</li>
+    </ul>
+    
+</body>
+</html>
