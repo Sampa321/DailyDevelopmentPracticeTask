@@ -1,0 +1,16 @@
+div{
+    /* position:fixed; */
+    /* position:absolute; */
+    position: static;
+    /* position: relative; */
+    top: 20px;
+    left: 100px;
+    background-color: blue;
+    color: white;
+} 
+p{
+    height: 400vh;
+    width: 400px;
+    background-color: blueviolet;
+    color: rgb(23, 0, 128);
+}

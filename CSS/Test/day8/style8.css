@@ -1,0 +1,34 @@
+.aa{
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+    background-image: linear-gradient(blue,green,purple);
+    color: white;
+}
+.bb{
+    height: 200px;
+    width: 300px;
+    border: 2px solid black;
+    background-image: radial-gradient(blue,green);
+    color: white;
+}
+section{
+    width: 100px ;
+    background-color: aqua;
+    word-wrap:break-word ;
+}
+.cc,.dd{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+.cc{
+     background-color: aqua;
+     display: none;
+     /*There is no space allocate but hidden */
+}
+.dd{
+    background-color: blue;
+    visibility: hidden;
+    /*There is space allocate but hidden */
+}
