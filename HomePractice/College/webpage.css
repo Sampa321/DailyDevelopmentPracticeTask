@@ -1,0 +1,85 @@
+.first{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.aa{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
+.sec{
+    background-image: url('https://www.bing.com/th/id/OIP.0wX7yxQdMnEy54b5TSDIWQHaE8?w=271&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2');
+    height: 300px;
+    width: 100vw;
+    margin: 0;
+   background-size: cover;
+   background-position:center ;
+   padding-top: 100px;
+}
+.btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: aqua;
+    color: black;
+    border-radius: 5px;
+}
+.third{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.third img{
+    height: 60px;
+    width: 60px;
+    outline: 2px solid black;
+    outline-offset: 1px;
+    border-radius: 50%;
+}
+.fourth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 40px;
+}
+.fourth img{
+    border-radius: 5px;
+}
+.fifth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 100px;
+    background-color: rgb(7, 7, 54);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 90vw;
+    height: 150px;
+}
+.fifth .mid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+ ul{
+    list-style-type: none;
+ }
+
+.fifth .mid .bb{
+    padding-top:40px ;
+}
+.fifth .mid img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
