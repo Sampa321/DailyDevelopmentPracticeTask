@@ -1,0 +1,113 @@
+ header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: orange;
+    font-size: large;
+}
+.poster img{
+    width: 500px;
+    border-radius: 20px;
+    outline: 1px solid orange;
+    outline-offset: 2px;
+}
+.poster{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    font-size: x-large;
+    font-weight: 600;
+}
+header div ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.question{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+.head{
+    font-size: x-large;
+    font-weight: 400;
+    color: orange;
+}
+.items{
+    height: 200px;
+    width: 250px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+footer{
+    background-color:orange;
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media screen and (max-width:500px)
+{
+    header{
+        padding: 20px;
+        display: block;
+        background-color: blue;
+        color: white;
+        font-size: large;
+        width: 100%;
+    }
+    header div ul{
+        display: block;
+        padding-left: 2px; 
+    }
+    header div ul li{
+        padding-top: 2px;
+    }
+    .poster{
+        margin-top: 50px;
+        display: block;
+        margin-bottom: 0;
+    }
+    .poster img{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .question{
+        display: block;
+    }
+    .items{
+        margin-bottom: 10px;
+        width: 100%;
+        box-shadow: 5px 5px 5px blue;
+    }
+    .head{
+        font-size: x-large;
+        font-weight: 400;
+        color: blue;
+    }
+    footer{
+        width: 100%;
+        display: block;
+        padding-top: 70px;
+        padding-bottom: 30px;
+        background-color: blue;
+        color: white;
+        height: 100px;
+        padding-left: 10%;
+    }
+    footer div{
+        padding-top: 5px;
+    }
+ }
