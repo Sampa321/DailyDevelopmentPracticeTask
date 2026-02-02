@@ -8,10 +8,26 @@
 </head>
 <style>
     :root{
-        --primary-color:green;
+        --primar-color:green;
+    }
+    .abc{
+        background-color: var(--primar-color);
+        --bc :yellow;
+    }
+    .pqr{
+        background-color: var(--bc);
+    }
+
+
+    .shadow{
+        /* text-shadow: 5px 5px 1px red; */ 
+        text-shadow: 5px 5px 5px purple;
     }
 </style>
 <body>
     <div class="abc">Hello world</div>
+    <div class="pqr">Hi</div>
+
+    <div class="shadow">text shadow</div>
 </body>
 </html>
