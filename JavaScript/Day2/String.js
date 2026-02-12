@@ -43,3 +43,4 @@ console.log(typeof(34.8))  //number
 
 console.log(1==='1')  //false
 console.log(1=='1')   //true
+
