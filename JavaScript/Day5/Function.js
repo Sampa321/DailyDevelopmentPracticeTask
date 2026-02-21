@@ -1,6 +1,5 @@
 function greet(){
-    console.log("Good evening !!");
-    
+    console.log("Good evening!!");
 }
 //greet()
 
@@ -19,13 +18,11 @@ var Bye = () =>{
 //Bye()
 
 
+//*****without function name,we can call function call
+const welcome = function(){ console.log("Hello")};
+welcome();
 
 //IIFE - Immediately Invoked Function Expression
-//*****without function name,we can call function call
-const welcome = function(){ console.log("Hello");};
-//welcome()
-
-
 //function arr = () => {console.log()} //Arrow function
 ( () =>{ console.log("IIFE")})()
 
@@ -34,7 +31,5 @@ const welcome = function(){ console.log("Hello");};
 X = "Virat Kohil";
 console.log(...X);
 
-let arr1 = [11,22,3,4,55,66,77,33]
-console.log(...arr1);
-console.log("Maximum value of arr is: "+Math.max(...arr1));
+
 

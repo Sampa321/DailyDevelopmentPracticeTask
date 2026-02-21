@@ -122,3 +122,10 @@ for(let i = 0;i<y.length;i++)
 }
 console.log("Sum of the array is : "+sum);
 console.log("Average of the array is : "+(sum/y.length));
+
+
+
+
+let arr1 = [11,22,3,4,55,66,77,33]
+console.log(...arr1);
+console.log("Maximum value of arr is: "+Math.max(...arr1));

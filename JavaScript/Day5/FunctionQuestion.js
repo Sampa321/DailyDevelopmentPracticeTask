@@ -59,6 +59,18 @@ function randomNumber(){
     return Math.random()
 }
 console.log("Random Number is : "+randomNumber());
+// function random(){
+//     let r = Math.floor(Math.random()*10)
+//     return r
+// }
+// console.log(random());  //3,4,5,9
+ 
+// function random1(x,y){
+//     let r = x + Math.floor(Math.random()*y)
+//     return r
+// }
+// console.log("Random value :"+random1(100,1000));   // 100 -1000
+
 
 
 //7.Write a function to print n fibonacci numbers.
@@ -86,13 +98,13 @@ function shortName(str)
 {
     string_arr = str.split(" ")
     ans = ""
-    for(let  i = 0;i<str.length;i++)
+    for(let  i = 0;i<string_arr.length;i++)
     {
         ans += string_arr[i][0]
     }
     console.log("Short form of "+str+" is : "+ans)
 }
-//shortName("Abdul Pakir Janur Abdul Kalam")
+shortName("Abdul Pakir Janur Abdul Kalam")
 
 
 //9.Add to matrix.
@@ -119,23 +131,31 @@ console.log(sum);
 
 //10.Multiply two matrix.
 matrix1 = [
-                [1,2],
-                [3,4]
+            [1,2],
+            [3,4]
 ]
 matrix2 = [
-                [1,2],
-                [3,4]
+            [1,2],
+            [3,4]
 ]
 sum = []
-let store = 0
 for(let i=0;i<matrix1.length;i++)
+{
+    sum[i] = []
+    for(let j = 0;j<matrix1[i].length;j++)
+    {
+        sum[i][j] = 0
+        for(let k = 0;k<matrix1[i].length;k++)
+        {
+           sum[i][j] += (matrix1[i][k] * matrix2[k][j])
+        }
+    }   
+}
+for(let i =  0;i<matrix1.length;i++)
 {
     for(let j = 0;j<matrix1[i].length;j++)
     {
-        for(let k = 0;k<matrix1[i][j].length;k++)
-        {
-           store += (matrix1[i][k] * matrix2[k][j])
-        }
+        console.log(sum[i][j]);
+        
     }
 }
-console.log(sum);
