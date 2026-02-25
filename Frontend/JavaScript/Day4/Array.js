@@ -107,7 +107,7 @@ for(let i=0;i<arr.length;i++)
     }
 }
 
-//[23,11,46,67,33,66] => index of 46 =2  using inbuild function
+//[23,11,46,67,33,66] => index of 46 = 2  using inbuild function
 let idx = arr.indexOf(46)
 console.log("Index of 46 is :"+idx)
 
