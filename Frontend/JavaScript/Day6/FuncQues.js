@@ -43,24 +43,44 @@ function countNumber(x)
 console.log("The digit of the "+number+" is :"+countNumber(number));
 
 //3.Write a function which will convert a number to binary 
+console.log("Binary number : ");
+
+var BinaryConverter = (num)=>{
+    let ans = ""
+    while(num>0)
+    {
+        let r = num%2
+        ans = r+ans
+        num = Math.floor(num/2)
+    }
+    return ans ?ans :"0"
+}
+for(let i=0;i<10;i++)
+{
+    console.log(BinaryConverter(i));
+    
+}
+
+
 //4.Write a function which will return the unique elements in array[Hard]
 arr = [12,45,7,533,2,3,12,46,7,2]
-arr.sort()
 console.log("Unique element is : ");
-
 function uniqueEle(arr)
 {
-    if(arr[0] != arr[1])
+    for(let i = 0;i<arr.length;i++)
     {
-        console.log(arr[0]);
-        
-    }
-    for(let i = 1;i<arr.length;i++)
-    {
-        if(arr[i-1] != arr[i])
+        let c=0;
+        for(let j = 0;j<arr.length;j++)
         {
-            console.log(arr[i]);
-            
+            if((arr[i] == arr[j]) && i!=j)
+            {
+                c=1;
+               break
+            }
+        }
+        if(c==0)
+        {
+            console.log(arr[i]);  
         }
     }
 }
@@ -76,16 +96,20 @@ function leaders(arr)
     console.log(arr[arr.length-1]);
     for(let i = arr.length-2;i>=0;i--)
     {
+        let boolean = true;
         for(let j = i+1;j<arr.length;j++)
         {
             if(arr[j]>arr[i])
             {
-                console.log(arr[i]);
+                boolean = false;
                 break;
             }
         }
-        break;
+        if(boolean)
+        {
+            console.log(arr[i]);
+        }
     }
    
 }
-//leaders(arr)
+leaders(arr)
