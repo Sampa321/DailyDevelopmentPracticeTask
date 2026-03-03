@@ -127,7 +127,7 @@ for(let i=0;i<matrix1.length;i++)
     }
 }
 console.log(sum);
-
+ 
 
 //10.Multiply two matrix.
 matrix1 = [
