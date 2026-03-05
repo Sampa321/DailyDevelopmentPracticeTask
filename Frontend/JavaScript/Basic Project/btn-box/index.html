@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 250px;
+        width: 250px;
+        border: 2px solid black;
+    }
+    button{
+        height: 20px;
+        width: 80px;
+        border-radius: 2px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <h2>Second mini project</h2>
+    <div class="box" id="box"></div><br>
+    <button onclick="updateRed()" style="background-color: red;">Red</button>
+    <button onclick="updateNoColor()" style="background-color: white;">No Color</button>
+    <button onclick="updateGreen()" style="background-color: green;">Green</button>
+</body>
+<script>
+    function updateRed(){
+        document.getElementById("box").style.backgroundColor = "Red";
+    }
+    function updateNoColor(){
+        document.getElementById("box").style.backgroundColor = "White";
+    }
+    function updateGreen(){
+        document.getElementById("box").style.backgroundColor = "Green";
+    }
+</script>
+</html>
