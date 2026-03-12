@@ -68,7 +68,7 @@ for(let i = 0;i<arr1.length;i++)
         {
             temp  = arr1[i]
             arr1[i] = arr1[j]
-            arr1[j] = temp
+            arr1[j] = temp  
         }
     }
 }

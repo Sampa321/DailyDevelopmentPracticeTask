@@ -88,28 +88,43 @@ uniqueEle(arr)
 
 //5.Write a function which will return all leaders in an array [Medium] Means all the number present to right will be lower than that number 
 //Example - [12,47,22,11,7,9] here leaders = 9,11,22,47
-arr = [12,47,22,11,7,9]
- console.log("All leaders in an array is : ");
+// arr = [12,47,22,11,7,9]
+  console.log("All leaders in an array is : ");
 
-function leaders(arr)
-{
-    console.log(arr[arr.length-1]);
-    for(let i = arr.length-2;i>=0;i--)
-    {
-        let boolean = true;
-        for(let j = i+1;j<arr.length;j++)
-        {
-            if(arr[j]>arr[i])
-            {
-                boolean = false;
-                break;
-            }
-        }
-        if(boolean)
-        {
-            console.log(arr[i]);
-        }
-    }
+// function leaders(arr)
+// {
+//     console.log(arr[arr.length-1]);
+//     for(let i = arr.length-2;i>=0;i--)
+//     {
+//         let boolean = true;
+//         for(let j = i+1;j<arr.length;j++)
+//         {
+//             if(arr[j]>arr[i])
+//             {
+//                 boolean = false;
+//                 break;
+//             }
+//         }
+//         if(boolean)
+//         {
+//             console.log(arr[i]);
+//         }
+//     }
    
+// }
+// leaders(arr)
+
+//OR,leader of an array
+const arr1 = [12,47,22,11,7,9];
+let max = arr1[arr1.length - 1]
+const output = [arr1[arr1.length - 1]]//9
+
+for(let i= arr1.length -2;i >= 0;i--)
+{
+    if(arr[i] >= max)
+    {
+        output.push(arr1[i])
+        max = arr1[i]
+    }
 }
-leaders(arr)
+console.log(output);

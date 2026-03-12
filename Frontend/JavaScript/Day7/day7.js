@@ -3,21 +3,6 @@ let arr = [12,45,4,687,34,23]
 arr.sort((a,b)=>a-b)
 console.log(arr);
 
-//leader of an array
-const arr1 = [12,47,22,11,7,9];
-let max = arr1[arr1.length - 1]
-const output = [arr1[arr1.length - 1]]
-for(let i= arr1.length -2;i >= 0;i--)
-{
-    if(arr[i] >= max)
-    {
-        output.push(arr1[i])
-        max = arr1[i]
-    }
-}
-console.log(output);
-
-
 
 //Map method
 // const nums = [1,2,3,4,5,6,7,8,9]
