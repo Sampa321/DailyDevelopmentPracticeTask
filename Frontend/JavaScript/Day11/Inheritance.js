@@ -1,6 +1,11 @@
 class Animal{
     color = "black";
     food = "grass";
+    constructor(c,f)
+    {
+        this.color = c;
+        this.food = f;
+    }
     eat(){
         console.log("Animal is eating !!");
     }
