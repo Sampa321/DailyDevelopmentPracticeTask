@@ -1,7 +1,7 @@
 x = "Hello "
 y = '     Hi    '
 z = x+y   //for concatenation
-console.log(z)  //HelloHi
+console.log(z)  //Hello  Hi
 console.log(x.length)   //5
 console.log(x.charAt(1))  //e
 console.log(x[0])  //H

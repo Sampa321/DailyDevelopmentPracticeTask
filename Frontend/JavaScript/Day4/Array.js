@@ -131,11 +131,11 @@ console.log(...arr1);
 console.log("Maximum value of arr is: "+Math.max(...arr1));
 
 
-// //ForEach Loop
-// function converter(str){
-//     console.log(str.toUpperCase());
-    
-// }
-// arr = ["rudra","sampa","arpita"]
-// arr.forEach(converter) 
-// console.log(arr)
+//ForEach Loop
+function converter(str){
+    console.log(str.toUpperCase());
+}
+ 
+arr = ["rudra","sampa","arpita"]
+arr.forEach(converter) 
+console.log(arr)
