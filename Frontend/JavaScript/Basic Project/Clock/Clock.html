@@ -3,13 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="Clock.js"></script>
+    <title>Clock</title>
 </head>
 <style>
-    
+    body{
+        background-color: blue;
+    }
+    h1{
+        text-align: center;
+        color: white;
+        padding-top: 100px;
+        font-size: 3em;
+        font-weight: bold;
+    }
+    .clockBox{
+        display: flex;
+        align-items: center;
+        justify-content: center ;
+        height: 100px;
+        width: 350px;
+        background:linear-gradient(purple);
+        color: white;
+        margin: 10%;
+        margin-left: 40%;
+        box-shadow: 5px 5px 5px black;
+        border: 2px solid black;
+        border-radius: 15px;
+        font-size: 1.3em;
+    }
+    #setTimeHour, #setTimeMinit, #setTimeSecond{
+        color: white;
+        font-size : 1.7em;
+        font-weight: bold;
+    }
 </style>
 <body>
-    <div></div>
+    <div>
+        <h1>Clock</h1>
+        <div class="clockBox">
+            <span id="setTimeHour">00</span><b>h</b>&nbsp;: &nbsp;
+            <span id="setTimeMinit">00</span><b>m</b>&nbsp;: &nbsp;
+            <span id="setTimeSecond">00</span><b>s</b>
+        </div>
+    </div>
 </body>
+<script>
+    setInterval(()=>{
+        let date = new Date();
+        document.getElementById("setTimeHour").innerHTML = date.getHours();
+        document.getElementById("setTimeMinit").innerHTML = date.getMinutes();
+        document.getElementById("setTimeSecond").innerHTML = date.getSeconds();
+    })
+
+    
+    document.title = "Clock";
+</script>
 </html>

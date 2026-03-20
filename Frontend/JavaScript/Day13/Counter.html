@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style>
+    body{
+        background-color: rgb(97, 97, 241);
+    }
+    .box{
+        height: 200px;
+        width: 320px;
+        background-color: blue;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        margin: 15% 35%;
+        padding: 3% 5%;
+        border-radius: 10%;
+        border: 2px solid black;
+    }
+    button{
+        background-color: darkblue;
+        color: white;
+        padding: 5%;
+        border-radius: 10%;
+        border: 2px solid black;
+        font-weight:bold ;
+        margin: 1%;
+    }
+    button:hover{
+        background-color: rgb(50, 11, 87);
+        padding: 6%;
+    }
+    h3{
+        color: white;
+        font-size: 1.7em;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="box">
+        <center><h3>Counter : <span id="count">0</span></h3></center><br>
+        <button onclick="increment()">Increment</button>
+        <button onclick="decrement()">Decrement</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+</body>
+<script>
+    let counter = document.getElementById("count")
+    let count = 0;
+    function increment(){
+        count++;
+        counter.innerHTML = count;
+    }
+    function decrement(){
+        count--;
+        counter.innerHTML = count;
+    }
+    function reset(){
+        count = 0;
+        counter.innerHTML = count;
+    }
+
+    document.title = "Counter";
+</script>
+</html>

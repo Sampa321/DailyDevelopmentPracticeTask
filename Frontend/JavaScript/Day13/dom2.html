@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div>
+        Fruit : <span id="fruit">Mango</span>
+        <button onclick="update()">Edit</button>
+
+
+
+        <br><br>
+        <div>
+            <input type="text" id="name" placeholder="Enter your name">
+            
+            <input type="number" id="age" placeholder="Enter age">
+             
+            <input type="text" id="address" placeholder="Enter Address"><br><br>
+           <center><button onclick="addDetails()">Add name</button></center>
+        </div>
+   </div> 
+</body>
+<script>
+    function update(){
+        //document.getElementById("fruit").innerHTML = "apple";
+        
+        let x = prompt("Enter update fruit name : ");
+        document.getElementById("fruit").innerHTML = x;
+    }
+
+
+
+    function addName(){
+        let data = document.getElementById("name").value;
+        alert("Name added : "+data)
+    }
+
+
+
+    console.log("New user added!");
+    function addDetails(){
+        let dataName = document.getElementById("name").value;
+        console.log("Name : "+dataName);
+        let dataAge = document.getElementById("age").value;
+        console.log("Age : "+dataAge);
+        let dataAdd = document.getElementById("address").value;
+        console.log("Address : "+dataAdd);
+    }
+ 
+
+
+
+
+
+
+    document.title = "Dom2";
+</script>
+</html>
+
+
+
+
+ 
