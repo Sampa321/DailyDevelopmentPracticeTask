@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dom2</title>
 </head>
 <body>
    <div>
@@ -14,10 +14,13 @@
 
         <br><br>
         <div>
+
+            <input type="text" id="name1" placeholder="Enter your name">
+            <button id="name" onclick="addName()">Add Name</button>
+
+
             <input type="text" id="name" placeholder="Enter your name">
-            
             <input type="number" id="age" placeholder="Enter age">
-             
             <input type="text" id="address" placeholder="Enter Address"><br><br>
            <center><button onclick="addDetails()">Add name</button></center>
         </div>
@@ -34,7 +37,7 @@
 
 
     function addName(){
-        let data = document.getElementById("name").value;
+        let data = document.getElementById("name1").value;
         alert("Name added : "+data)
     }
 

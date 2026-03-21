@@ -1,5 +1,5 @@
-//Method-Overloading, Method-overriding
-//Method-Overloading not supports in python but Method-overriding supports in python
+// //Method-Overloading, Method-overriding
+// //Method-Overloading not supports in python but Method-overriding supports in python
 // class Animal{
 //     eat()
 //     {
@@ -18,11 +18,11 @@
 // }
 // let d = new Dog();
 // d.eat();
-//d.eat("food")
+// d.eat("food")
 
   
 
-/*
+
 //try-catch- finally
 try{
     console.log(10/0);  //automatically handle for logical error
@@ -71,7 +71,7 @@ setTimeout(()=>{
     console.log("Some func which will execute 10s")},10000)
 console.log("End");
 
-*/
+
 console.log(window)
 
 
