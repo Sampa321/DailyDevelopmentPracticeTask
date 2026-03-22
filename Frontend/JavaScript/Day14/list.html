@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+<style>
+    #abc{
+        background-color: blue;
+        margin: 10px;
+    }
+</style>
+<body>
+    Fruit 
+    <ul id="fruit"></ul>
+
+    &nbsp;&nbsp; Name : Age
+    <ul id="aa"></ul>
+</body>
+
+<script>
+    let fruitlist = ["Apple","Banana","Pineapple","Watermelon","Mango"];
+    let list = document.getElementById("fruit");
+    for(let i = 0;i<fruitlist.length;i++)
+    {
+        list.innerHTML += "<li>"+fruitlist[i]+"</li>";
+    }
+
+
+    let name = ["Rudra","Sampa","Arpita"];
+    let age = [21,20,21];
+    let list1 = document.getElementById("aa");
+    for(let i = 0;i<name.length;i++)
+    {
+        list1.innerHTML += "<li id='abc'>"+name[i]+" : "+age[i]+"</li>"
+    }
+</script>
+</html>

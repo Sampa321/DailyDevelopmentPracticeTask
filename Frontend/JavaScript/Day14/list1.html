@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+</head>
+<body>
+    <h3>City Name</h3>
+    <h5 id="aa"></h5> <br><br>
+
+    <h3>Name  - Phone Number</h3>
+    <h4 id="bb"></h5><br><br>
+
+    <h3>Language - uses</h3>
+    <h4 id="cc"></h5>
+
+</body>
+<script>
+    let cityName =["Kolkata","Mumbai","Bangalore","Channai","Pune"]
+    let l1 = document.getElementById("aa");
+    for(let i = 0;i<cityName.length;i++)
+    {
+        l1.innerHTML += "<h5>"+cityName[i]+"</h5>";
+    }
+
+   let name = ["Sampa","Rudra","Arpita","Sangita","Shruti","Tumpa"]
+    let l2 = document.getElementById("bb");
+    let phoneNo = [1344546,6887734,89943674,6587954,8932435,8754546]
+    for(let i =0 ; i<name.length;i++)
+    {
+        l2.innerHTML += "<h5>"+name[i]+" - "+phoneNo[i]+"</h5>";
+    }
+
+
+    let language = ["C","Python","Java","JavaScript","HTML","CSS"]
+    let uses = ["Basic Fundamentals","Data Science","Android Mobile Application","Frontend Web Development","Creating Website Structure","Styling"]
+    let l3 = document.getElementById("cc");
+    for(let i = 0;i<language.length;i++)
+    {
+        l3.innerHTML += "<h5>"+language[i]+" uses for "+uses[i]+"</h5>";
+    }
+</script>
+</html>
