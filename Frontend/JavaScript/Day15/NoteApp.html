@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node APP</title>
+</head>
+<style>
+    body{
+        background:radial-gradient(blue,purple);
+    }
+    .outside{
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+        margin-left: 40%;
+        width: 300px;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 15px;
+        box-shadow: 5px 5px 1px black;
+    }
+    h3,label{
+        color: white;
+        text-align: center;
+    }
+    #contentpage{
+        color: white;
+        margin-left: 40%;
+    }
+    .add{
+        background-color: green;
+        color: white;
+        margin-left: 100px;
+        border: 2px solid black;
+        border-radius: 5px;
+        height: 40px;
+        width: 100px;
+        box-shadow: 3px 3px 3px green;
+        font-weight: bold;
+    }
+    input{
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-align: center;
+        border: 2px solid black;
+    }
+    textarea{
+        width: 200px;
+        border-radius: 10px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+    }
+    label{
+        font-size: 1.2em;
+    }
+    .del{
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px red;
+        border: 1px solid black;
+        font-weight: bold;
+        text-align: center;
+    }
+    .del:hover{
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+<body>
+    
+    <div class="outside">
+        <div>
+            <h3>Note App</h3><br> 
+            <div>
+                <label for="title">title &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input type="text" name="title" id="title" placeholder="title here &rarr;"><br><br>
+                <label for="content">Content </label> <textarea name="content" id="content" placeholder="Content here "></textarea><br><br>
+                <button class="add" onclick="add()">App</button>
+            </div>
+        </div>
+        
+    </div><br><br><hr>
+    <div id="contentpage"></div>
+    <hr>
+</body>
+<script>
+    let area = [{
+        title :"Java",
+        description : "Platform Independence"
+    },{
+        title: "Python",
+        description : "Machine Learning"
+    }
+    ];
+    function addSomething(){
+       document.getElementById("contentpage").innerHTML = "";
+        for(let i = 0;i<area.length;i++)
+        {
+            document.getElementById("contentpage").innerHTML += `<h2>${area[i].title}</h2>
+            <p style = "font-size:1.5em";>${area[i].description}</p><button class="del" style= "background-color :red" onclick = "del(${i})">delete</button><hr style = margin:"0">`
+            
+        }
+
+    }
+    addSomething()
+
+    function add(){
+        let x = document.getElementById("title").value;
+        let y = document.getElementById("content").value;
+        area.push({title : x, description : y});
+        addSomething();
+    }
+
+    function del(index){
+        let temp = [];
+        let j = 0;
+        for(let i = 0;i<area.length;i++)
+        {
+            if(i!=index)
+            {
+                temp[j++] = area[i];
+            }
+        }
+        area = temp;
+        addSomething();
+    }
+
+</script>
+</html>
