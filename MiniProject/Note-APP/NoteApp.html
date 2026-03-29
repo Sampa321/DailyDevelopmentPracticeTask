@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note APP</title>
+</head>
+<style>
+    body{
+        background:rgb(69, 57, 69);
+    }
+    .outside{
+        
+        margin-top: 5%;
+        margin-left: 40%;
+        
+        width: 300px;
+        padding: 20px;
+         
+        transition: transform 0.2s;
+    }
+    .outside:hover{
+        transform: scale(1.05);
+    }
+    h3,label{
+        color: white;
+        text-align: center;
+    }
+    #note{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5;
+        
+    }
+    #contentpage{
+        color: white; 
+        width: 100%;
+        padding: 5%;
+    }
+    .add{
+        background-color: rgb(219, 16, 114);
+        color: white;
+        margin-left: 100px;
+        border: 2px solid black;
+        border-radius: 5px;
+        height: 40px;
+        width: 100px;
+        box-shadow: 3px 3px 1px black;
+        font-weight: bold;
+        transition : transform 0.2s;
+    }
+    .add:hover{
+        font-weight: 1000;
+        margin-bottom: 20px;
+        transform: scale(1.05);
+    }
+    input{
+        height: 30px;
+        width: 200px;
+        border-radius: 10px;
+        font-weight: bold;
+        
+        border: 2px solid black;
+    }
+    textarea{
+        width: 200px;
+        border-radius: 10px;
+        font-weight: bold;
+        color: black;
+       
+    }
+    label{
+        font-size: 1.2em;
+    }
+    .del{
+        height: 40px;
+        width: 100px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px red;
+        border: 1px solid black;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.3rem;
+        color: white;
+        transition : transform 0.2s;
+    }
+    .del:hover{
+        padding: 5px;
+        text-align: center;
+        padding-bottom: 30px;
+        transform: scale(1.00);
+    }
+    #warn{
+        color: red;
+    }
+</style>
+<body>
+    
+    <div class="outside">
+        <div >
+           <div class="upper"> <h3>Note App</h3><br> </div>
+            <div>
+                <label for="title">title &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input type="text" name="title" id="title" placeholder="title here &rarr;"> <br><br>
+                <label for="content">Content </label> <textarea name="content" id="content" placeholder="Content here "></textarea><br><br>
+                <div id="formbtn">
+                    <button id="edit" class="add" onclick="add()">ADD</button>
+                </div>
+            </div>
+        </div>
+        
+    </div> 
+    <center><p id="warn"></p></center>
+    <hr>
+    <div id="note">
+        <div id="contentpage"></div>
+    </div>
+</body>
+<script>
+    let notes = [{
+        title :"Java",
+        description : "Platform Independence",
+        star : false
+    },{
+        title: "Python",
+        description : "Machine Learning",
+        star : false
+    }
+    ];
+    function addSomething(){
+       document.getElementById("contentpage").innerHTML = "";
+        for(let i = 0;i<notes.length;i++)
+        {
+            document.getElementById("contentpage").innerHTML += `<br><h2>${notes[i].title}</h2> 
+            <p style = "font-size:1.5em";>${notes[i].description}</p> 
+            <button class="del" style= "background-color :red" onclick = "del(${i})">delete</button> 
+            <button class="edit" style= "background-color :green" onclick = "edit(${i})">Edit</button>
+            <button class="star" style= "background-color :yellow" onclick = "star(${i})">${notes[i].star ? "Unstar" : "star"}</button>
+             `
+        }
+
+    }
+    addSomething()
+
+    function add(){
+        let x = document.getElementById("title").value;
+        let y = document.getElementById("content").value;
+        if( x == '' || y == '') {
+            document.getElementById("warn").innerHTML = "Please enter title and description";
+            return;
+        }
+        notes.push({title : x, description : y, star : false});
+        addSomething();
+        document.getElementById("title").value = " ";
+        document.getElementById("content").value = " ";
+    }
+
+    function del(index){
+        let temp = [];
+        let j = 0;
+        for(let i = 0;i<notes.length;i++)
+        {
+            if(i!=index)
+            {
+                temp[j++] = notes[i];
+            }
+        }
+        notes = temp;
+        addSomething();
+    }
+ 
+    function edit(index)
+    {
+        document.getElementById("title").value = notes[index].title;
+        document.getElementById("content").value = notes[index].description;
+        document.getElementById("formbtn").innerHTML = `<center><button onclick = "update(${index})">Edit</button></center>`;
+    }
+
+    function update(i)
+    {
+        notes[i].title = document.getElementById("title").value;
+        notes[i].description = document.getElementById("content").value;
+        addSomething();
+        document.getElementById("formbtn").innerHTML = `<button id="edit" class="add" onclick="add()">ADD</button>`;
+        document.getElementById("title").value = " ";
+        document.getElementById("content").value = " ";
+    }   
+
+    function star(i)
+    {
+        notes[i].star = !notes[i].star;
+        addSomething();
+    }
+</script>
+</html>

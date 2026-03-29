@@ -23,13 +23,13 @@
         border: 2px solid black;
         box-shadow: 5px 5px 5px rgb(16, 41, 63);
     }
-    .outside{
+    .price-input{
         display: flex;
         align-items: center;
         justify-content: center;
         transition: transform 0.2s;
     }
-    .outside:hover{
+    .price-input:hover{
         transform: scale(1.05);
     }
     h2{
@@ -55,22 +55,51 @@
         background: none;
         top: -5px;
         pointer-events: none;
+    }
+    .range-input input::-webkit-slider-thumb{
+        pointer-events: auto;
         cursor: pointer;
     }
 </style>
 <body>
     <div class="main">
-        <div class="outside">
-        <div>
-            <h2>Price Range Slider</h2><br>
-            <label for="Min">Minimum Price </label><input type="number" id="Min" value="2500"><br> <br>
-            <label for="Max">Maximum Price </label><input type="number" id="Max" value="8500"><br><br>
+        <div class="price-input">
+            <div>
+                <h2>Price Range Slider</h2><br>
+                <label for="Min">Minimum Price </label><input type="number" id="Min" value="2500"><br> <br>
+                <label for="Max">Maximum Price </label><input type="number" id="Max" value="8500"><br><br>
+            </div>
+        </div><br>
+        <div class="range-input">
+                <input type="range" class="range-min" max="10000" min="0" value="2500">
+                <input type="range" class="range-max" max="10000" min="0" value="8500"> 
         </div>
-    </div><br>
-    <div class="range-input">
-            <input type="range" id="range" max="10000" min="0" value="2500">
-            <input type="range" id="range" max="10000" min="0" value="8500"> 
-    </div>
     </div>
 </body>
+<script>
+    let minSlider = document.querySelector(".range-min");
+    let maxSlider = document.querySelector(".range-max");
+    let minInput = document.getElementById("Min");
+    let maxInput = document.getElementById("Max");
+    minSlider.oninput = function(){
+        if(minSlider.value > maxSlider.value)
+        {
+            minSlider.value = maxSlider.value;
+        }
+        minInput.value = minSlider.value;
+    }
+    maxSlider.oninput = function(){
+        if(maxSlider.value<minSlider.value)
+        {
+            maxSlider.value = minSlider.value;
+        }
+        maxInput.value = maxSlider.value;
+    }
+    minInput.oninput = function(){
+        minSlider.value = minInput.value;
+    }
+    maxInput.oninput = function(){
+        maxSlider.value = maxInput.value;
+    }
+</script>
 </html>
