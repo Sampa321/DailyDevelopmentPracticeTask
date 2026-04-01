@@ -7,35 +7,33 @@
 </head>
 <style>
     body{
-        background:rgb(69, 57, 69);
+        background:radial-gradient(purple,blue);
     }
-    .outside{
-        
-        margin-top: 5%;
-        margin-left: 40%;
-        
-        width: 300px;
-        padding: 20px;
-         
-        transition: transform 0.2s;
+   
+    .upper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
-    .outside:hover{
-        transform: scale(1.05);
-    }
+
+
+
     h3,label{
         color: white;
         text-align: center;
     }
-    #note{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5;
-        
-    }
+    
     #contentpage{
         color: white; 
-        width: 100%;
-        padding: 5%;
+        font-size: x-large;
+         border: 2px solid white;
+         padding: 10px;
+         display: flex;
+        gap: 3px;
+        flex-wrap: wrap;
+         grid-template-rows: auto;
+   
     }
     .add{
         background-color: rgb(219, 16, 114);
@@ -59,7 +57,6 @@
         width: 200px;
         border-radius: 10px;
         font-weight: bold;
-        
         border: 2px solid black;
     }
     textarea{
@@ -67,75 +64,82 @@
         border-radius: 10px;
         font-weight: bold;
         color: black;
-       
     }
     label{
         font-size: 1.2em;
     }
-    .del{
+    .edit,.star{
         height: 40px;
-        width: 100px;
-        border-radius: 5px;
-        box-shadow: 1px 1px 1px red;
-        border: 1px solid black;
+        padding: 10px;
         font-weight: bold;
-        text-align: center;
-        font-size: 1.3rem;
-        color: white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px green;
+        border: 1px solid black;
         transition : transform 0.2s;
     }
-    .del:hover{
-        padding: 5px;
+    .edit:hover,.star:hover{
+        
         text-align: center;
-        padding-bottom: 30px;
-        transform: scale(1.00);
+       
+        transform: scale(1.06);
     }
     #warn{
         color: red;
     }
+    .del-img,.star-img,.edit-img{
+        height: 20px;
+        width: 20px; 
+        background-color: black;
+    }
+    .c-page{
+        border: 2px solid black;
+        padding: 5px 20px 20px 20px;
+        background-color: rgb(6, 6, 58);
+       overflow: hidden;
+       width: 200px;
+       height: 200px;
+    }
 </style>
 <body>
-    
-    <div class="outside">
-        <div >
-           <div class="upper"> <h3>Note App</h3><br> </div>
+    <div class="upper"> 
+        <div>
+            <h3>Note App</h3>
             <div>
+                <legend style="color: white;">ADD NOTE</legend>
                 <label for="title">title &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input type="text" name="title" id="title" placeholder="title here &rarr;"> <br><br>
                 <label for="content">Content </label> <textarea name="content" id="content" placeholder="Content here "></textarea><br><br>
                 <div id="formbtn">
                     <button id="edit" class="add" onclick="add()">ADD</button>
                 </div>
             </div>
-        </div>
-        
+        </div> 
     </div> 
     <center><p id="warn"></p></center>
-    <hr>
-    <div id="note">
-        <div id="contentpage"></div>
-    </div>
+    <div id="contentpage"></div> 
 </body>
 <script>
     let notes = [{
         title :"Java",
         description : "Platform Independence",
-        star : false
+        star : false,
     },{
         title: "Python",
         description : "Machine Learning",
         star : false
-    }
+    },
     ];
     function addSomething(){
        document.getElementById("contentpage").innerHTML = "";
         for(let i = 0;i<notes.length;i++)
         {
-            document.getElementById("contentpage").innerHTML += `<br><h2>${notes[i].title}</h2> 
-            <p style = "font-size:1.5em";>${notes[i].description}</p> 
-            <button class="del" style= "background-color :red" onclick = "del(${i})">delete</button> 
-            <button class="edit" style= "background-color :green" onclick = "edit(${i})">Edit</button>
-            <button class="star" style= "background-color :yellow" onclick = "star(${i})">${notes[i].star ? "Unstar" : "star"}</button>
-             `
+            document.getElementById("contentpage").innerHTML += `<div class = "c-page"><h2 style = "text-align : center" >${notes[i].title}</h2> 
+            <p style = "text-align : center";>${notes[i].description}</p> 
+            <center style = "width :100%">
+            <button onclick = "del(${i})"><img class = "del-img" src="delete.png" alt="del"></button> 
+            <button onclick = "edit(${i})"><img class = "edit-img" src="edit.png" alt="edit"></button>
+            <button onclick = "star(${i})"><img class = "star-img" src="${!notes[i].star ? "like.png" : "liked.png"}" alt=""></button>
+            </center>
+            </div> <br>`;
         }
 
     }
@@ -179,8 +183,8 @@
     {
         notes[i].title = document.getElementById("title").value;
         notes[i].description = document.getElementById("content").value;
-        addSomething();
         document.getElementById("formbtn").innerHTML = `<button id="edit" class="add" onclick="add()">ADD</button>`;
+        addSomething();
         document.getElementById("title").value = " ";
         document.getElementById("content").value = " ";
     }   
