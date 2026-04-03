@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: rgb(30, 30, 53);
+    
+    
+}
+header{
+    gap: 40px;
+    display: flex;
+    padding-top: 50px;
+    padding: 20px;
+    padding-left: 30px;
+    gap: 400px;
+}
+ 
+a{
+    color: white;
+    text-decoration: none;
+}
+.header-right,.header-left{
+    gap: 40px;
+    display: flex;
+}
+.header-btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: black;
+    background : radial-gradient(aqua);
+}
+.header-search{
+    padding: 5px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 200px;
+    height: 40px;
+}
+.header-imgInput{
+    height: 40px; 
+    border-right: none; 
+    padding-left: 25px; 
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.mid{
+    background:radial-gradient(purple,black);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.mid-img{
+    border-radius: 10px;
+    padding: 10px;
+    height: 30px;
+    background-color:rgb(40, 40, 43);
+    border: none;
+    color: white;
+    font-size: x-small;
+}
+.mid-text{
+    position: absolute;
+    top: 200px;
+    padding-left: 480px;
+    padding-top: 30px;
+}
+.midBtn{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+}
+.mid-btn1,.mid-btn2{
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+    
+}
+.mid-btn1{
+    border: none;
+}
+.mid-btn2{
+    border: white;
+    color: white;
+}
+.third{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(15, 15, 40);
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.fourth{
+    background-color: rgb(18, 18, 58);
+    padding: 40px;
+    padding-top: 70px;
+}
+.fourth-aa{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box1,.box2,.box3{
+    background-color: rgb(19, 19, 47);
+    border: 0.1px solid darkslategray;
+    padding: 30px;
+    border-radius: 10px;
+    width: 28%;
+    height: 30%;
+
+}
+#box1-btn1{
+    background-color: rgb(93, 7, 93);
+    color: rgb(194, 90, 194);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+#box1-div1,#box1-div3,#box2-div1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#box1-div2,#box2-div2{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#box1-div2 button,#box2-div2 button{
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgb(36, 38, 38);
+    color: rgb(128, 125, 125);
+    border: none;
+}
+#box1-div3 button{
+    padding: 10px 20px;
+    background-color:rgb(19, 19, 70);
+    color: aqua;
+    border-radius: 5px;
+    border: none;
+}
+
+#box2-btn1{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgb(69, 50, 14);
+    color: orange;
+    border: none;
+}
