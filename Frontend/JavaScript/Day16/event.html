@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body onload="load()">
+    <h1 id="hh">heading</h1>
+    <p id="aa">hello</p>
+     <input type="text" id="in" onchange="change()">
+</body>
+<script>
+    function work(){
+        console.log("Working !!");
+        
+    }
+
+    function load(){
+        console.log("Loading!!");
+        
+    }
+
+    function change(){
+        console.log("Change input!!");
+        
+    }
+
+    function hovering(){
+        console.log("Mouse hover!!");
+    }
+
+
+
+    //document.getElementById("in").onchange = change;
+    document.getElementById("hh").onmouseover = hovering;
+    //document.body.onload = load;
+    document.getElementById("aa").onclick = work;
+</script>
+</html>
