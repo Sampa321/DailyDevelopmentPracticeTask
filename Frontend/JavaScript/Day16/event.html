@@ -9,6 +9,9 @@
     <h1 id="hh">heading</h1>
     <p id="aa">hello</p>
      <input type="text" id="in" onchange="change()">
+
+     <button onmouseleave="f2()">out</button>
+     <button onmouseenter="f3()">enter</button>
 </body>
 <script>
     function work(){
@@ -30,6 +33,13 @@
         console.log("Mouse hover!!");
     }
 
+    function f2(){
+        alert("mouse out!!")
+    }
+
+    function f3(){
+        alert("mouse enter!!")
+    }
 
 
     //document.getElementById("in").onchange = change;
