@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Increase And Decrease</title>
+</head>
+<style>
+    #box{
+        height: 100px;
+        width: 100px;
+        background-color: rgb(8, 8, 66);
+        position: absolute;
+        border: 2px solid black; 
+        top: 100px;
+        left: 100px;
+    }
+</style>
+<body>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+    <div id="box"></div>
+</body>
+<script>
+    let box = document.getElementById("box");
+    let size = 1;
+    function increase(){
+        interval = setInterval(() =>{
+            box.style.transform = `scale(${size})`;
+            size += 0.1;
+            if(size > 2) 
+            {
+                clearInterval(interval)
+                decrease();
+            }
+        },100)
+    }
+    function decrease(){
+        interval = setInterval(() =>{
+            box.style.transform = `scale(${size})`;
+            size -= 0.1;
+            if(size < 0.5) {
+                clearInterval(interval);
+                increase()
+            }
+        },100)
+    }
+       
+</script>
+</html>

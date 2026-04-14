@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Interest</title>
+</head>
+<style>
+    body{
+        background-color: rgb(15, 15, 78);
+    }
+    .main{
+        background-color: rgb(189, 215, 237);
+        justify-content: center;
+        align-items: center;
+        margin-top: 20%;
+        margin-left: 25%;
+        height: 200px;
+        width: 50vw;
+        text-align: center;
+        padding-top: 4vw;
+        padding-left: 30px;
+        border-radius: 15px;
+        border: 4px solid black;
+        padding-bottom: 20px;
+    }
+
+    #myH3{
+        font-family: Helvetica;
+        font-size: 1.5em;
+    }
+    button{
+        background-color: green;
+        color: white;
+        padding: 12px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px green;
+        border: 2px solid black;
+        font-weight: bold;
+    }
+    button:hover{
+        background-color: rgb(12, 79, 12);
+        color: white;
+        animation-duration: 0.ms;
+        padding: 14px;
+    }
+    
+    .input{
+        height: 40px;
+        width: 200px;
+        margin-right: 30px;
+        background-color: blue;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding-left: 10px;
+        border-radius: 10px;
+        border: 2px solid black;
+    }
+    .input:hover{
+        background-color: rgb(9, 9, 70);
+        color: white;
+        padding:3px 3px 3px 12px ;
+    }
+    #myP{
+        color: red;
+    }
+</style>
+<body>
+    <div class="main">
+        <input type="text" placeholder="Enter Money" id="money" class="input">
+        <input type="text" placeholder="Enter Rate" id="rate" class="input">
+        <input type="text" placeholder="Enter time/year" id="time" class="input"> <br><br>
+        <button onclick="calculate()">Calculate Interest</button>
+        <h3 id="myH3">Interest : ₹0</h3>
+        <p id="myP"></p>
+    </div>
+    
+</body>
+<script>
+    function calculate(){
+        let money = document.getElementById("money").value.trim();
+        let rate = document.getElementById("rate").value.trim();
+        let time = document.getElementById("time").value.trim();
+        if(!money || !rate || !time)
+        {
+            document.getElementById("myP").textContent = "Please fill all input!!";
+            return;
+        }
+        money = Number(money);
+        rate = Number(rate);
+        time = Number(time);
+        if((isNaN(money) || isNaN(rate) || isNaN(time) || money < 0 || rate < 0 || time < 0))
+        {
+            document.getElementById("myP").textContent = "Please fill valid input!!";
+            return;
+        }
+        let re = (money*rate*time)/100;
+        document.getElementById("myH3").innerHTML = `Interest : ₹${re}`;
+        if((!isNaN(money) && !isNaN(rate) && !isNaN(time) && money > 0 && rate > 0 && time > 0))
+        {
+            document.getElementById("myP").textContent = " ";
+            document.getElementById("myP").style.display = none;
+        }
+    }
+</script>
+
+</html>

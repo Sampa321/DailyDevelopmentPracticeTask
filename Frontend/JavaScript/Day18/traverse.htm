@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>heading</h1>
+    <div id="data"></div>
+
+
+
+    <h1 id="myH1">Welcome</h1>
+    <input type="text" id="input" placeholder="heading edit..."><br><br>
+    <button onclick="edit()">edit</button>
+</body>
+<script>
+    y = document.createElement("h1");  //<h1></h1>
+    y.textContent = "Data inserted!!"; //<h1>Data inserted!!</h1>
+    document.getElementById("data").append(y);
+
+
+    function edit(){
+        let head = document.getElementById("input").value;
+        //document.getElementById("myH1").innerHTML = head; //that is convert to html tag so, we use textcontent. eg : <a>link</a> o/p: link
+        document.getElementById("myH1").textContent = head;  //that is benefit of textcontent that is not convert to html tag. eg : <a>link</a> o/p: <a>link</a>
+    }
+
+</script>
+</html>

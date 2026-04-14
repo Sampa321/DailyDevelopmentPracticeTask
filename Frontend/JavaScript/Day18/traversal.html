@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traversal</title>
+</head>
+<body>
+    <div id="main">
+        <h1>First</h1>
+        <h3 id="myH3">Welcome</h3>
+        <div>
+            <input type="text">
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates cumque repudiandae animi consectetur quidem minus beatae sint saepe id repellendus hic, laboriosam doloremque eveniet aliquid officiis molestiae doloribus, culpa deleniti?</p>
+        <h5>Bye</h5>
+    </div>
+    <div>hello</div>
+</body>
+<script>
+    //document.getElementById("main").firstElementChild.textContent = "Welcome✨✨✨✨";
+    document.getElementById("main").lastElementChild.textContent = "Bye Bye 👋";
+    document.getElementById("main").nextElementSibling.textContent = "Hello!!";
+
+    let h3tag = document.getElementById("myH3");
+    h3tag.previousElementSibling.textContent = "Second";
+    console.log(h3tag.parentElement)
+
+
+
+    //Using index
+    let main = document.getElementById("main");
+    main.children[3].textContent = "lorem10";
+</script>
+</html>
