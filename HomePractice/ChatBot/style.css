@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+
+}
+.chat-container{
+    background-color: rgb(19, 19, 69);
+    width: 100%;
+    height: 80%;
+}
+.user-chat-box img{
+    width: 60px;
+    height: 10px;
+}
+.user-chat-area,.ai-chat-area{
+    width: 90px;
+    padding: 20px;
+    background-color: black;
+}
+.ai-chat-box{
+    width: 10px;
+}

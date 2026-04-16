@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility</title>
+</head>
+<body>
+    <button id="btn" onclick="show()">show</button><br><br>
+    <img id="image" src="pic.webp" alt="">    
+    </body>
+<script>    
+    function show(){
+        let btnContent = document.getElementById("btn");
+        let image = document.getElementById("image");
+        if(btnContent.textContent == "show")
+        {
+            btnContent.textContent = "hide";
+        }
+        else{
+            btnContent.textContent = "show";
+        }
+        if(image.style.visibility == "hidden")
+        {
+            image.style.visibility  = "visible";
+        }
+        else
+        {
+            image.style.visibility = "hidden"
+        }
+    }
+    
+
+</script>
+</html>
