@@ -4,12 +4,13 @@
 - npm create vite@latest fileName
 - select React, JavaScript
 - cd fileName
-- npm install
+- npm install (install all dependencies and devDependencies from package.json)
 - npm run dev
 
 
 # What is React?
 - React is a js library which is used for building web applications.
+- imporove not loading direct showing.
 
 
 # Difference between library and framework.
@@ -42,6 +43,10 @@ e.g : Next Js (Both frontend and backend)
 - public : Contains all static files like images, videos etc. That we cannot change after long time.
 - src(Source code) : Contains all the code we have written.
 - assets : Contains the assets or data. That is same at all.
+- vite.config.js : configuration file for vite
+- eslint.config.js : configuration file for exlint
+(configuration -> setting file)
+
 
 
 # Explain JSX.
@@ -56,9 +61,57 @@ js
 - provide less security compare to React
 - More data loss
 
-
-
 React
 ------
 - Provide more security
 - No data Loss
+
+
+# Node js 
+- Software which is used to run javaScript.
+- Manage project.
+
+
+# Package
+- a collection of code which provides us the utility functions
+- other name of package : dependency
+e.g : I have used axios dependency in my project.
+"react": "^19.2.5", // react -> fileName, ^19.2.5 -> version
+
+
+
+# npm 
+ - package manager for node js
+ - npm install <pkg name>  -> for installing package (that is install inside node_modules)
+ - npm uninstall <pkg name>  -> for uninstalling package (that is uninstall from node_modules)
+ - npm run dev -> for running application
+ - npm run build -> for bundling the project
+ - npm install -> install the packages present in package.json
+ - it has no official full form, but many people say its full form is node package manager.
+
+
+
+ # why we don't push our node modules to gitHub?
+ - Because we can regenerate node modules whenever we need. (so, that is already written in .gitignore file)
+
+
+ # Do i need to push pkg.json in gitHub?
+ - yes, because pkg.json contains information about dependencies.
+
+
+ # what is package.json?
+ - package.json is configuration file which keeps track of packages along with their version which we have used.
+
+
+ # Why pkg-lock.json when we have pkg.json?
+ -pkg.json keeps version ranges which may differ from the exact version.
+ - pkg-lock.json tracks exact version of the package.
+
+
+ # why have we so much packages in node modules when we have downloaded only few?
+ - Because the packages we download also need some packages for working.
+ e.g : A(x,y) -> A, x, y   Here x depends on x and y so need install much .
+
+
+# How many package.json we have?
+- All the packages which we install have their own pkg.json
