@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Game</title>
+</head>
+<style>
+     
+    .btn{
+        height: 100px;
+        width: 100px;
+        background-color: gray;
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    let box = document.getElementById("box");
+    let curr = null;
+    let last = null;
+    let interval = null;
+    function ready(){
+        for(let i = 1; i < 10 ;i++)
+        {
+            box.innerHTML += `<button class = "btn" onclick = "check(${i})">${i}</button>`;
+        }
+        interval = setInterval(() => {
+            let idx = Math.floor(Math.random()*9);
+            let elements = document.getElementsByClassName("btn");
+            if(last != null) last.style.backgroundColor = "gray";
+            curr = elements[idx];
+            curr.style.backgroundColor = "blue";
+            last = curr;
+        }, 1000);
+    }
+    ready()
+    
+    
+    
+
+    function check(idx)
+    {
+        if(document.getElementsByClassName("btn")[idx] == curr)
+        {
+            clearInterval(interval);
+            box.innerHTML = `<h2>Congratulations!! You have won the game!! </h2> <button onclick = "Restart()">Play Again</button>`;
+        }
+    }
+
+    function Restart()
+    {
+        box.innerHTML = "";
+        ready();
+    }
+</script>
+</html>
