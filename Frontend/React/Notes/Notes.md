@@ -115,3 +115,54 @@ e.g : I have used axios dependency in my project.
 
 # How many package.json we have?
 - All the packages which we install have their own pkg.json
+
+
+
+# Transitive dependency
+- Transitive dependency is the dependency of the dependency.
+A pkg is needed for our project.
+For running A pkg we need B and C pkg => B and C will be transitive dependency for me.
+
+
+# Why 2 React pkg needed.
+ - React is not limited to web development. It is also used in app development and others. React DOM is limites to web development.
+
+
+# Can React be used for Backend?
+- No
+     React - Frontend
+     Node - Backend
+     Next - Both
+
+
+# What is dependency?
+- Dependency is the package on which our project depends on.
+
+
+# What are the types of dependencies?
+- There are two types of dependency - Normal dependency and devDependency(Development Dependency)
+
+
+# Difference between normal and dev dependency.
+- Normal dependency is used for in both development and production.
+- Dev dependency is used for development only.
+
+# Why we need dev dependency?
+- Make development easy
+
+# How install  dev dependency?
+- npm install pkg-name Or, npm i pkg-name  -> for installing normal dependency(eg : axios)
+- npm install -D pkg-name Or, npm i -D pkg-name  -> for installing dev dependency(eg : noremon)
+
+
+# type of browser.
+- 2 types of browser
+- Modern browser -> new browser
+- Legacy browser -> old browser  
+
+
+
+# type of export-import
+- 2 type of export - import present in React.
+     - default export - import
+     - named export - import
