@@ -1,198 +1,139 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Note APP</title>
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <style>
     body{
-        background:radial-gradient(purple,blue);
-    }
-   
-    .upper{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-
-
-    h3,label{
-        color: white;
-        text-align: center;
-    }
-    
-    #contentpage{
-        color: white; 
-        font-size: x-large;
-         border: 2px solid white;
-         padding: 10px;
-         display: flex;
-        gap: 3px;
-        flex-wrap: wrap;
-         grid-template-rows: auto;
-   
-    }
-    .add{
-        background-color: rgb(219, 16, 114);
-        color: white;
-        margin-left: 100px;
-        border: 2px solid black;
-        border-radius: 5px;
-        height: 40px;
-        width: 100px;
-        box-shadow: 3px 3px 1px black;
-        font-weight: bold;
-        transition : transform 0.2s;
-    }
-    .add:hover{
-        font-weight: 1000;
-        margin-bottom: 20px;
-        transform: scale(1.05);
-    }
-    input{
-        height: 30px;
-        width: 200px;
-        border-radius: 10px;
-        font-weight: bold;
-        border: 2px solid black;
-    }
-    textarea{
-        width: 200px;
-        border-radius: 10px;
-        font-weight: bold;
-        color: black;
-    }
-    label{
-        font-size: 1.2em;
-    }
-    .edit,.star{
-        height: 40px;
-        padding: 10px;
-        font-weight: bold;
-        border-radius: 5px;
-        box-shadow: 1px 1px 1px green;
-        border: 1px solid black;
-        transition : transform 0.2s;
-    }
-    .edit:hover,.star:hover{
-        
-        text-align: center;
-       
-        transform: scale(1.06);
-    }
-    #warn{
-        color: red;
-    }
-    .del-img,.star-img,.edit-img{
-        height: 20px;
-        width: 20px; 
-        background-color: black;
-    }
-    .c-page{
-        border: 2px solid black;
-        padding: 5px 20px 20px 20px;
-        background-color: rgb(6, 6, 58);
-       overflow: hidden;
-       width: 200px;
-       height: 200px;
+        padding-top: 30px;
     }
 </style>
-<body>
-    <div class="upper"> 
-        <div>
-            <h3>Note App</h3>
-            <div>
-                <legend style="color: white;">ADD NOTE</legend>
-                <label for="title">title &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label><input type="text" name="title" id="title" placeholder="title here &rarr;"> <br><br>
-                <label for="content">Content </label> <textarea name="content" id="content" placeholder="Content here "></textarea><br><br>
-                <div id="formbtn">
-                    <button id="edit" class="add" onclick="add()">ADD</button>
+<body class="bg-[#0a1024] ">
+    <div class="h-screen text-[#ff00b7]">
+        <div class="upper">
+            <h2 class="text-2xl font-bold text-center font-serif">Notes App</h2>
+            
+            <div class="text-center">
+                <input type="text" id="title" placeholder="Add Title here..." class="bg-[#0a1024] text-white border-gray-600 border-2 h-10 w-96 p-2 rounded-lg mt-5 mb-5"><br>
+                <textarea name="" id="content" class="bg-[#0a1024] border-gray-600 border-2 h-40 w-96 p-2 text-white rounded-lg " placeholder="Add Description here..."></textarea><br>
+                <p id="warn" class="text-red-600"></p>
+                <div id="btn">
+                  <button class="bg-[#7700ff] text-white h-10 w-20 font-bold font-serif rounded-lg hover:bg-blue-700 hover:shadow-lg  outline outline-blue-700 outline-offset-1 transition-shadow duration-300 mt-5" onclick="adder()">Add</button>
                 </div>
+                
             </div>
-        </div> 
-    </div> 
-    <center><p id="warn"></p></center>
-    <div id="contentpage"></div> 
+            
+            <hr class="mt-5 text-gray-600">
+            <div id="show" class="flex flex-wrap gap-5">
+
+              
+
+              
+            </div>
+        </div>
+    </div>
+    
 </body>
 <script>
-    let notes = [{
-        title :"Java",
-        description : "Platform Independence",
-        star : false,
-    },{
-        title: "Python",
-        description : "Machine Learning",
-        star : false
-    },
-    ];
-    function addSomething(){
-       document.getElementById("contentpage").innerHTML = "";
-        for(let i = 0;i<notes.length;i++)
+     let notes = [
         {
-            document.getElementById("contentpage").innerHTML += `<div class = "c-page"><h2 style = "text-align : center" >${notes[i].title}</h2> 
-            <p style = "text-align : center";>${notes[i].description}</p> 
-            <center style = "width :100%">
-            <button onclick = "del(${i})"><img class = "del-img" src="delete.png" alt="del"></button> 
-            <button onclick = "edit(${i})"><img class = "edit-img" src="edit.png" alt="edit"></button>
-            <button onclick = "star(${i})"><img class = "star-img" src="${!notes[i].star ? "like.png" : "liked.png"}" alt=""></button>
-            </center>
-            </div> <br>`;
+          title: "Java",
+          description: "dummy-1212",
+          star:false
+        },
+        {
+          title: "Python",
+          description: "dummy-222222222212",
+          star:false
+        },
+      ];
+
+      function populate() {
+        let area = document.getElementById("show");
+        area.innerHTML = "";
+
+        if(notes.length==0){
+          area.innerHTML = `<div class="flex justify-center items-center w-full"><p class="text-gray-500 text-lg">No notes are there !!</p></div>`
         }
+        for (let i = 0; i < notes.length; i++) {
+          area.innerHTML +=`  <div class="border-2 border-[#0066ff] ${notes[i].star ? " outline outline-yellow-400 outline-offset-2 ":""} rounded-lg w-80   m-3 ">
+                    <h4 class="text-center text-white text-2xl ">${!notes[i].star ?"🔖":"💫"} ${notes[i].title}</h4>
+                    <p class="text-gray-500 text-center">${notes[i].description}</p>
+                   <div class="flex justify-between items-end m-2">
+                     <button onclick='edit(${i})'><img class="w-6 text-blue-800  rounded-md " src="edit.png" alt=""></button>
+                     <button onclick='star(${i})'><img class="w-6 text-blue-800  rounded-md " src="${!notes[i].star ? "like.png" : "liked.png"}" alt=""></button>
+                      <button onclick='del(${i})'><img class="w-6   rounded-md " src="delete.png" alt=""></button>
+                   </div>
+                </div>
+`;
+        }
+      }
 
-    }
-    addSomething()
+      populate();
 
-    function add(){
+      function adder() {
         let x = document.getElementById("title").value;
         let y = document.getElementById("content").value;
-        if( x == '' || y == '') {
-            document.getElementById("warn").innerHTML = "Please enter title and description";
-            return;
+        let warn = document.getElementById("warn")
+        warn.innerHTML =""
+        if(x=="" || y==""){
+          warn.innerHTML ="Enter Title and Content"
+          return
         }
-        notes.push({title : x, description : y, star : false});
-        addSomething();
-        document.getElementById("title").value = " ";
-        document.getElementById("content").value = " ";
-    }
 
-    function del(index){
-        let temp = [];
+        notes.push({ title: x, description: y , star : false});
+        populate();
+          document.getElementById("title").value =''
+          document.getElementById("content").value =''
+      }
+
+      function del(x) {
+        temp = [];
         let j = 0;
-        for(let i = 0;i<notes.length;i++)
-        {
-            if(i!=index)
-            {
-                temp[j++] = notes[i];
-            }
+        for (let i = 0; i < notes.length; i++) {
+          if (i != x) {
+            temp[j++] = notes[i];
+          }
         }
         notes = temp;
-        addSomething();
-    }
- 
-    function edit(index)
-    {
-        document.getElementById("title").value = notes[index].title;
-        document.getElementById("content").value = notes[index].description;
-        document.getElementById("formbtn").innerHTML = `<center><button onclick = "update(${index})">Edit</button></center>`;
-    }
+        populate();
+      }
 
-    function update(i)
-    {
-        notes[i].title = document.getElementById("title").value;
-        notes[i].description = document.getElementById("content").value;
-        document.getElementById("formbtn").innerHTML = `<button id="edit" class="add" onclick="add()">ADD</button>`;
-        addSomething();
-        document.getElementById("title").value = " ";
-        document.getElementById("content").value = " ";
-    }   
+      function edit(i){
+         document.getElementById("title").value =notes[i].title
+         document.getElementById("content").value =notes[i].description
 
-    function star(i)
-    {
-        notes[i].star = !notes[i].star;
-        addSomething();
-    }
+         document.getElementById("btn").innerHTML = `<button class="bg-[#0066ff] text-white h-10 w-20 font-bold font-serif rounded-lg hover:bg-blue-700 hover:shadow-lg  outline outline-blue-700 outline-offset-1 transition-shadow duration-300 mt-5" onclick="EditApply(${i})">Edit</button>`
+
+      }
+
+      function EditApply(i){
+
+        let x = document.getElementById("title").value;
+        let y = document.getElementById("content").value;
+        let warn = document.getElementById("warn")
+        warn.innerHTML =""
+        if(x=="" || y==""){
+          warn.innerHTML ="Enter Title and Content"
+          return
+        }
+        notes[i].title = x
+        notes[i].description = y
+
+          document.getElementById("btn").innerHTML = ` <button class="bg-[#0066ff] text-white h-10 w-20 font-bold font-serif rounded-lg hover:bg-blue-700 hover:shadow-lg  outline outline-blue-700 outline-offset-1 transition-shadow duration-300 mt-5" onclick="adder()">Add</button>`
+
+          populate()
+          document.getElementById("title").value =''
+          document.getElementById("content").value =''
+      }
+
+      function star(i){
+        notes[i].star =!notes[i].star
+        populate()
+      }
 </script>
 </html>
