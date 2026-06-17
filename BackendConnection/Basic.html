@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="conn"></div>
+</body>
+<script>
+    fetch("https://fakestoreapi.com/products").then(res => res.json()).then(data => executer(data))
+    function executer(d){
+        console.log(d)
+    }
+    let x = document.getElementById("conn");
+    x.innerHTML = "<div>"
+</script>
+</html>
