@@ -1,0 +1,88 @@
+ 
+.headDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100px;
+  margin: 0;
+  color: white;
+  background-color:cornflowerblue;
+}
+.innerHeadDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+}
+.btn{
+  border: none;
+  color: white;
+  background-color:cornflowerblue;
+  font-size: 1em;
+}
+.btn:hover{
+  font-weight: bold;
+}
+
+.headbtn
+{
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(186, 190, 190);
+  color: white;
+  font-weight: bold;
+}
+
+.FormDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+   padding-bottom: 50px;
+   background-color:cornflowerblue;
+}
+
+.FormDiv .first{
+  color: white;
+}
+
+.FormDiv .first button{
+  border: 2px solid white;
+  color: white;
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+  background-color:cornflowerblue;
+}
+
+.FormDiv form{
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 250px;
+}
+
+
+.FormDiv form input{
+  height: 30px;
+  width: 230px;
+  border-radius: 10px;
+  border-radius: none;
+  padding-left: 5px;
+}
+
+.FormDiv form input::placeholder{
+  color: black;
+  font-weight: bold;
+}
+
+.FormDiv form button{
+  padding: 10px;
+  width: 170px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(139, 139, 235);
+  color: white;
+}
+
+ 

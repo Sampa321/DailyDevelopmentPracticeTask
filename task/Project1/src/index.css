@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ #navMain{
+  display: flex;
+  background-color: rgb(114, 106, 225);
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#navFirst button{
+  padding: 10px;
+  background-color: blue;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid black; 
+}
+
+#navFirst button:hover{
+  background-color: rgb(10, 10, 95);
+  color: white;
+}
+
+#navSecond button{
+   padding: 10px;
+   margin-left: 100px;
+   border-radius: 5px;
+   background-color: rgb(0, 26, 128);
+   color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid black; 
+}
+
+#navSecond button:hover{
+  background-color: white;
+  color: black;
+}
+
+
+#navImage img{
+  height: 50px;
+  border-radius: 40%;
+  border: 2px solid black;
+}
+
+.loginDiv{
+  background-color: blueviolet;
+  height: 200px;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  padding-left: 40%;
+}
+
+.loginDiv input{
+  height: 40px;
+  width: 250px;
+  border-radius: 10px;
+  border: 3px solid rgb(139, 9, 139);
+  cursor: pointer;
+  background-color: blue;  
+  padding-left: 10px;
+  font-weight: bold;
+  color : white
+}
+
+.loginDiv input::placeholder{
+  color: white;
+}
+
+.loginDiv button{
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 10%;
+  background-color: rgb(7, 7, 102);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid blue;
+  outline: 2px solid rgb(7, 7, 102)
+  
+}
+
+.loginDiv button:hover{
+    width: 105px;
+    height: 55px;
+}
+
+.searchDiv{
+  height: 150px;
+  background-color:rgb(152, 85, 215);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.searchDiv input{
+  height: 40px;
+  width: 250px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: none;
+  background-color: blueviolet;  
+  font-weight: bold; 
+  padding-left: 10px;
+  border-bottom-color: black;
+  border-top-color: black;
+  border-left-color: black;
+  border-width: 2px;
+}
+
+.searchDiv input::placeholder{
+  color: white;
+}
+
+.searchDiv button{
+  height: 43px;
+  width: 30px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: none;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  border-bottom-color: black;
+  border-top-color: black;
+  border-right-color: black;
+}
+
+.footerInnerDiv{
+  display :flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 200px;
+  width: 100%;
+}
+
+.footerDiv{
+   background-color:cornflowerblue;
+}
+
+.end{
+      padding-left: 40%;
+      padding-bottom: 70px;
+}
+
+#last{
+  padding-left: 50px;
+}
