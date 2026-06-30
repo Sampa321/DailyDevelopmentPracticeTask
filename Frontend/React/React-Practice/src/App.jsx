@@ -2,7 +2,8 @@ import React from 'react'
 import Details from './Components/Details'
 import ShowDetails from './Components/ShowDetails'
 import PostDetails from './Components/PostDetails';
-
+import Counter from './Components/Counter';
+import Fruit from './Components/Fruit';
 
 export default function App() {
   // const details =[
@@ -176,38 +177,48 @@ export default function App() {
    
 
   return (
+    // <div className='grid  grid-cols-4 gap-4 ml-3 mr-3 mt-3  '>
+    //    {/* {
+    //     userComponent
+    //    } */}
+
+
+
+    //    {/* {
+    //     details.map((user) =>(
+    //       <Details name = {user.name} age = {user.age} city = {user.city}/>
+    //     ))
+    //    } */}
+
+
+
+    //    {/* {
+    //     details.map((user,index) =>(
+    //       <Details key ={index} name = {user.name} age = {user.age} city = {user.city}/>
+    //     ))
+    //    } */}
+
+
+    //    {/* {
+    //     <ShowDetails/>
+    //    } */}
+ 
+    //     {
+    //       posts.map((post) => (
+    //       <PostDetails key = {post.id} authorAvatar = {post.authorAvatar} author = {post.author} createdAt = {post.createdAt} title = {post.title} content = {post.content} likes = {post.likes} comments = {post.comments} category = {post.category} tags = {post.tags}/>
+    //     ))
+    //     }
+
+    // </div>
     <div>
-       {/* {
-        userComponent
-       } */}
 
+      {
+        <Counter/>
+      }
 
-
-       {/* {
-        details.map((user) =>(
-          <Details name = {user.name} age = {user.age} city = {user.city}/>
-        ))
-       } */}
-
-
-
-       {/* {
-        details.map((user,index) =>(
-          <Details key ={index} name = {user.name} age = {user.age} city = {user.city}/>
-        ))
-       } */}
-
-
-       {/* {
-        <ShowDetails/>
-       } */}
-
-        {
-          posts.map((post) =>{
-            <PostDetails autherAvatar = {post.authorAvatar}  author = {post.author} title = {post.title} content = {post.content} likes = {post.likes} comments = {post.comments} category = {post.category} tags = {post.tags}/>
-          })
-        }
-
+        {/* {
+          <Fruit/>
+        } */}
     </div>
   )
 }
