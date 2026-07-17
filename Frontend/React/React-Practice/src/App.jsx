@@ -7,6 +7,8 @@ import Fruit from './Components/Fruit';
 import Form from './Components/Form';
 import Age from './Components/Age';
 import RandomNumberGenerator from './Components/RandomNumberGenerator'
+import UseEffectDemo from './Components/UseEffectDemo';
+import ToDoDemo from './Components/ToDoDemo';
 
 
 
@@ -225,9 +227,9 @@ export default function App() {
           <Fruit/>
         } */}
 
-        {
+        {/* {
           <Form/>
-        }
+        } */}
 
 {/* 
         {
@@ -238,6 +240,15 @@ export default function App() {
         {/* {
           <RandomNumberGenerator/>
         } */}
+
+        {/* {
+          <UseEffectDemo/>
+        } */}
+
+
+        {
+          <ToDoDemo/>
+        }
     </div>
   )
 }

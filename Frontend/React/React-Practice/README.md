@@ -14,7 +14,8 @@
 
 
 # hooks
-
+- hooks are normal javaScript utility functions which provide state and lifecycle methods to functional components.
+e.g : UseState, UseEffect
 
 
 # use state
@@ -24,3 +25,16 @@ useState() - returns [variable, setter func]
 -whenever the setter func will be called it will trigger the re-render
 
 - React uses reconcilation algorithm behind the scene for efficient Dom manipulation
+
+
+
+# UseEffect
+
+
+
+
+UseEffect Dependency array
+- if no dependency array : UseEffect will run on every render.
+- if empty dependecy array : useEffect will run on initial render.
+- id dependencies in dependency array : useEffect will run whenever the dependency changes
+
