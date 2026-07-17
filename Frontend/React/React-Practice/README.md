@@ -36,5 +36,5 @@ useState() - returns [variable, setter func]
 UseEffect Dependency array
 - if no dependency array : UseEffect will run on every render.
 - if empty dependecy array : useEffect will run on initial render.
-- id dependencies in dependency array : useEffect will run whenever the dependency changes
+- if dependencies in dependency array : useEffect will run whenever the dependency changes
 
