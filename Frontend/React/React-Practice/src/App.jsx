@@ -9,6 +9,7 @@ import Age from './Components/Age';
 import RandomNumberGenerator from './Components/RandomNumberGenerator'
 import UseEffectDemo from './Components/UseEffectDemo';
 import ToDoDemo from './Components/ToDoDemo';
+import SearchBar from './Components/SearchBar';
 
 
 
@@ -246,8 +247,12 @@ export default function App() {
         } */}
 
 
-        {
+        {/* {
           <ToDoDemo/>
+        } */}
+
+        {
+          <SearchBar/>
         }
     </div>
   )

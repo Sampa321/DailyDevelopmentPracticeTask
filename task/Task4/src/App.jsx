@@ -1,5 +1,6 @@
 import React from 'react' 
 import PostDetails from './Components/PostDetails';
+import ToDoApp from './Components/ToDoApp';
 
 
 export default function App() { 
@@ -163,9 +164,11 @@ export default function App() {
   return (
     <div>
         {
-          posts.map((post) => (
-          <PostDetails authorAvatar = {post.authorAvatar} author = {post.author} createdAt = {post.createdAt} title = {post.title} content = {post.content} likes = {post.likes} comments = {post.comments} category = {post.category} tags = {post.tags}/>
-        ))
+        //   posts.map((post) => (
+        //   <PostDetails authorAvatar = {post.authorAvatar} author = {post.author} createdAt = {post.createdAt} title = {post.title} content = {post.content} likes = {post.likes} comments = {post.comments} category = {post.category} tags = {post.tags}/>
+        // ))
+
+        <ToDoApp/>
         }
 
     </div>
